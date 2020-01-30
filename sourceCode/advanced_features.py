@@ -217,8 +217,26 @@
 # one is generator, which includes generator and generator function with yield keyword.
 #These objects that can directly act on the for loop are called Iterable objects
 #You can use isinstance() to check whether an object is an iterable object
-from collections import Iterable
-print(isinstance([], Iterable))
-print(isinstance({}, Iterable))
-print(isinstance('abc', Iterable))
-print(isinstance((), Iterable))
+# from collections import Iterable
+# print(isinstance([], Iterable))
+# print(isinstance({}, Iterable))
+# print(isinstance('abc', Iterable))
+# print(isinstance((), Iterable))
+
+#The generator can not only operate on the loop, but also can be continuously called by the next() function and return the next value,
+#until the StopIteration error is finally thrown to indicate that the next value cannot be returned
+#An object that can be called by the next() function and keeps returning the next value is called an Iterator
+#You can use isinstance() to check wheather an object is an Iterator.
+from collections import Iterator
+# print(isinstance((x for x in range(10)), Iterator))
+
+#Generators are Iterator objects, but although list, and str are Iterable, they are not Iterators
+#You can use the iter() function to turn list, dictionary, str, etc. Iterable object into Iterator
+print(isinstance(iter([]), Iterator))
+#You may ask, why aren't list, dictionary, str and other data types other than Iterator?
+#This is because Python's Iterator represents a data stream
+#Iterator objects can be called by next() and return the next value until a StopIteration error is thrown when there is no data
+#You can think of the data stream as an ordered sequence, but we can't know the length of the sequence in advance. We can ony get the next value
+#through next() function, so the calculation of Iterator is lazy, only when it is needed it will be calculated.
+# Iterator can even represent an infinitely large data stream, such as all natural numbers. And using a list is never possible to store all 
+# natual numbers 
