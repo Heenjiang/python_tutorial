@@ -7,15 +7,26 @@
 #print('\\\n\\')
 #print('\\\t\\')
 #print(r'\\\\\t\\\\')
-n = 123
-f = 456.789
-s1 = 'Hello, world'
-s2 = 'Hello, \'Adam\''
-s3 = r'Hello, "Bart"'
-s4 = r'''Hello,Lisa!'''
-print(n, f, s1, s2, s3, s4)
-print('%2d-%02d' %(3,1))
-print('%.2f' %3.1415926)
+# n = 123
+# f = 456.789
+# s1 = 'Hello, world'
+# s2 = 'Hello, \'Adam\''
+# s3 = r'Hello, "Bart"'
+# s4 = r'''Hello,Lisa!'''
+# print(n, f, s1, s2, s3, s4)
+# print('%2d-%02d' %(3,1))
+# print('%.2f' %3.1415926)
+
+# n = 123
+# f = 456.789
+# s1 = 'Hello, world'
+# s2 = 'Hello, \'Adam\''
+# s3 = r'Hello, "Bart"'
+# s4 = r'''Hello,
+# Lisa!'''
+# print(n, f, s1, s2, s3, s4)
+# print('%2d-%02d' %(3,1))
+# print('%.2f' %3.1415926)
 # s1 = 72 
 # s2 = 85
 # r  = (s2 - s1)/72 * 100
@@ -79,9 +90,18 @@ print('%.2f' %3.1415926)
 # print('End')
 
 #Practice the dictionary data structure in python
+<<<<<<< HEAD
 # d = {'Michael' : 95, 'Bob' : 75, 'Tracy' : 85}
 # print(d['Michael'])
 # #Check if key is in dictionary
 # if not('Jack' in d):#if d.get('Jack', -1) != -1: or d.get('Jack')     ps:Through the get() method provided by dictionary data structure, if the key doesn't exist return None, or the value specified by yourself
 #     d['Jack'] = 100
 #     print(d['Jack'])
+=======
+d = {'Michael' : 95, 'Bob' : 75, 'Tracy' : 85}
+print(d['Michael'])
+#Check if key is in dictionary
+if not('Jack' in d):#if d.get('Jack', -1) != -1: or d.get('Jack')     ps:Through the get() method provided by dictionary data structure, if the key doesn't exist return None, or the value specified by yourself
+    d['Jack'] = 100
+    print(d['Jack'])
+>>>>>>> 165cec495ab06fb11592420fc44e2b648b4def48
