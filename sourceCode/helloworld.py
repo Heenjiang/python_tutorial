@@ -90,18 +90,9 @@
 # print('End')
 
 #Practice the dictionary data structure in python
-<<<<<<< HEAD
 # d = {'Michael' : 95, 'Bob' : 75, 'Tracy' : 85}
 # print(d['Michael'])
 # #Check if key is in dictionary
 # if not('Jack' in d):#if d.get('Jack', -1) != -1: or d.get('Jack')     ps:Through the get() method provided by dictionary data structure, if the key doesn't exist return None, or the value specified by yourself
 #     d['Jack'] = 100
 #     print(d['Jack'])
-=======
-d = {'Michael' : 95, 'Bob' : 75, 'Tracy' : 85}
-print(d['Michael'])
-#Check if key is in dictionary
-if not('Jack' in d):#if d.get('Jack', -1) != -1: or d.get('Jack')     ps:Through the get() method provided by dictionary data structure, if the key doesn't exist return None, or the value specified by yourself
-    d['Jack'] = 100
-    print(d['Jack'])
->>>>>>> 165cec495ab06fb11592420fc44e2b648b4def48
