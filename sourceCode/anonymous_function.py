@@ -9,8 +9,8 @@ addition to defining a function for f(x), you can also directly pass in an anony
 # print(anonymous_function)
 
 '''
-The keyword lambda indicates an nonymous function, and the x before the colon indicates a function parameter.
-One limitation of anonymous function is that there can only one statement. You do not need to write return value is the result of the expression
+The keyword lambda indicates an anonymous function, and the x before the colon indicates a function parameter.
+One limitation of anonymous function is that there can be only one statement. You do not need to write return value is the result of the expression
 There is a benefit to using anonymous functions, because functions have no names, so you don't have to worry about function name conflicts.
 In addition, an anonymous function is also a function object, You can also assign an anonymous function to a variable, and then use the vaiable
 to call the function

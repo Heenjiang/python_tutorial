@@ -10,7 +10,7 @@ Which can be defined as follows:
 #         return func(*args, **kw)
 #     return wrapper
 
-# @log
+# @log#now = log(now)
 # def now():
 #     print('2015-3-25')
 
@@ -32,7 +32,7 @@ Inside the wrapper() function, first print the log and then immediately call the
 #         return wrapper
 #     return decorator
 
-# @log('executes')
+# @log('executes')#now = log('execute')(now)
 # def now():
 #     print('2015-3-25')
 
@@ -48,8 +48,8 @@ Because the name "wrapper" is from the function "wrapper" which returned by the 
 and other attributes into the wrapper() function, otherwise, some code that depends on the function signature will execute incorrectly
 And there is a built-in functions in Python moudle called functools.wraps does the copy things, so complete decorator is writted as follows 
 '''
-import functools
-import time
+# import functools
+# import time
 
 # def log(func):
 #     @functools.wraps(func)
@@ -66,6 +66,7 @@ import time
 #             return func(*args, **kw)
 #         return wrapper
 #     return decorator
+
 #TASK 1：Please design a decorator that can act on any function and print the execution time of the function
 # def metric(fn):
 #     @functools.wraps(fn)
@@ -94,33 +95,34 @@ import time
 # elif s != 7986:
 #     print('测试失败!')
 
-def log(text_or_fn):
-    if isinstance(text_or_fn, str):
-        def decorator(fn):
-            @functools.wraps(fn)
-            def wrapper(*args, **kw):
-                print('%s , call %s()' %(text_or_fn, fn.__name__))
-                return fn(*args, **kw)
-            return wrapper
-        return decorator
-    else:
-        fn = text_or_fn
-        print(fn)#test_log_without_parameters
-        @functools.wraps(fn)
-        def wrapper(*args, **kw):
-            print('call %s()' %fn.__name__)
-            return fn(*args, **kw)
-        return wrapper
+#TASK 2:Write a @log decorator, with and without parameters
+# def log(text_or_fn):
+#     if isinstance(text_or_fn, str):#Check the type of parameters
+#         def decorator(fn):
+#             @functools.wraps(fn)
+#             def wrapper(*args, **kw):
+#                 print('%s , call %s()' %(text_or_fn, fn.__name__))
+#                 return fn(*args, **kw)
+#             return wrapper
+#         return decorator
+#     else:
+#         fn = text_or_fn
+#         print(fn)#test_log_without_parameters
+#         @functools.wraps(fn)
+#         def wrapper(*args, **kw):
+#             print('call %s()' %fn.__name__)
+#             return fn(*args, **kw)
+#         return wrapper
+#TEST
+# @log('Function is execting!')#Executed when defined
+# def test_log_with_parameters():
+#     # print(time.time())
+#     pass
 
-@log('Function is execting!')
-def test_log_with_parameters():
-    # print(time.time())
-    pass
-
-@log
-def test_log_without_parameters():
-    # print(time.time())
-    pass
+# @log
+# def test_log_without_parameters():
+#     # print(time.time())
+#     pass
 
 
 
