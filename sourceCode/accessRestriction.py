@@ -77,31 +77,34 @@ variable and do not access it at will"
 '''
 #TASK: Please hide the gender field of the following Student object, use get_gender() and set_gender() to access and set the attribute, 
 #and check the parameter validity:
-class Student(object):
+# class Student(object):
 
-    def __init__(self, name, gender):
-        self.__name = name
-        self.__gender = gender
+#     def __init__(self, name, gender):
+#         self.__name = name
+#         self.__gender = gender
     
-    def get_gender(self):
-        return self.__gender
+#     def get_gender(self):
+#         return self.__gender
     
-    def set_gender(self, gender):
-        genderDic = {'male': 2, 'female': 1, 'other': 0}
-        if isinstance(gender, str) == False:
-            raise TypeError('Parameter is invalid!')
-        elif isinstance(genderDic[gender.lower()], int) == False:
-            raise TypeError('Parameter is invalid!')
-        else:
-            self.__gender = gender
-#TEST:
-bart = Student('Bart', 'male')
-if bart.get_gender() != 'male':
-    print('测试失败!')
-else:
-    bart.set_gender('female')
-    if bart.get_gender() != 'female':
-        print('测试失败!')
-    else:
-        print('测试成功!')
+#     def set_gender(self, gender):
+#         genderDic = {'male': 2, 'female': 1, 'other': 0}
+#         if isinstance(gender, str) == False:
+#             raise TypeError('Parameter is invalid!')
+#         elif isinstance(genderDic[gender.lower()], int) == False:
+#             raise TypeError('Parameter is invalid!')
+#         else:
+#             self.__gender = gender
+# #TEST:
+# bart = Student('Bart', 'male')
+# if bart.get_gender() != 'male':
+#     print('测试失败!')
+# else:
+#     bart.set_gender('female')
+#     if bart.get_gender() != 'female':
+#         print('测试失败!')
+#     else:
+#         print('测试成功!')
+
+
+
     
