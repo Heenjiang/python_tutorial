@@ -2,16 +2,16 @@
 If you want to prevent internal attributes from being accessed externally, you can prefix the attribute name with two underscores__.
 In Python, if the instance's variable name starts with __, it become a private variable (private). Internally accessible, externally inaccessible
 '''
-# class Student(object):
+class Student(object):
 
-#     def __init__(self, name, score):
-#         self.__name = name
-#         self.__score = score
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
     
-#     def print_score(self):
-#         print('%s: %s' %(self.__name, self.__score))
-# bart = Student('Nicole', 99)
-# bart.print_score()
+    def print_score(self):
+        print('%s: %s' %(self.__name, self.__score))
+bart = Student('Nicole', 99)
+bart.print_score()
 '''
 This ensures that external code cannot modify the internal state of the object at will, so that the code is more robust through the protection
 of access restriction
