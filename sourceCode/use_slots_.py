@@ -10,6 +10,7 @@ class Student(object):
 s = Student()
 s.name = 'Michael'
 s.age = 16
+print(s.name)
 #s.score = 99#AttributeError: 'Student' object has no attribute 'score'
 '''
 Because 'score' has not been palced in __slots__. you cannot bind the 'score' attribute to 'Student' class, and then attempting to bind 'score'
